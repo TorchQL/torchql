@@ -1,6 +1,6 @@
 # TorchQL
 
-TorchQL is a framework for programming integrity constraints over machine learning applications in Python.
+TorchQL is a query language for Python-based machine learning models and datasets.
 TorchQL comes with PyTorch support to allow for easier integration of TorchQL queries into the machine learning pipeline.
 Users can write queries that specify integrity constraints through a combination of query operations and arbitrary
 user-defined functions.
