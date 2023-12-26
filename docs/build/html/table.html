@@ -1,0 +1,726 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>TorchQL’s Table</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'table';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="TorchQL’s Query" href="query.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title"></p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
+                    TorchQL Documentation
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation Instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/DebugML/model-debugging/tree/main">GitHub</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Documentation</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="database.html">TorchQL’s Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="query.html">TorchQL’s Query</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">TorchQL’s Table</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/table.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>TorchQL’s Table</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#torchql.Table"><code class="docutils literal notranslate"><span class="pre">Table</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#torchql.Table.batch"><code class="docutils literal notranslate"><span class="pre">Table.batch()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#torchql.Table.filter"><code class="docutils literal notranslate"><span class="pre">Table.filter()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#torchql.Table.flatten"><code class="docutils literal notranslate"><span class="pre">Table.flatten()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#torchql.Table.group_by"><code class="docutils literal notranslate"><span class="pre">Table.group_by()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#torchql.Table.group_by_with_index"><code class="docutils literal notranslate"><span class="pre">Table.group_by_with_index()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#torchql.Table.group_reduce"><code class="docutils literal notranslate"><span class="pre">Table.group_reduce()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#torchql.Table.head"><code class="docutils literal notranslate"><span class="pre">Table.head()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#torchql.Table.intersect"><code class="docutils literal notranslate"><span class="pre">Table.intersect()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#torchql.Table.join"><code class="docutils literal notranslate"><span class="pre">Table.join()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#torchql.Table.order_by"><code class="docutils literal notranslate"><span class="pre">Table.order_by()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#torchql.Table.project"><code class="docutils literal notranslate"><span class="pre">Table.project()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#torchql.Table.reduce"><code class="docutils literal notranslate"><span class="pre">Table.reduce()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#torchql.Table.sample"><code class="docutils literal notranslate"><span class="pre">Table.sample()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#torchql.Table.sample_many"><code class="docutils literal notranslate"><span class="pre">Table.sample_many()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#torchql.Table.transform"><code class="docutils literal notranslate"><span class="pre">Table.transform()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#torchql.Table.union"><code class="docutils literal notranslate"><span class="pre">Table.union()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#torchql.Table.unique"><code class="docutils literal notranslate"><span class="pre">Table.unique()</span></code></a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="torchql-s-table">
+<h1>TorchQL’s Table<a class="headerlink" href="#torchql-s-table" title="Permalink to this heading">#</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="torchql.Table">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">torchql.</span></span><span class="sig-name descname"><span class="pre">Table</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">samples</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id_index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transform</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">disable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchql.Table" title="Permalink to this definition">#</a></dt>
+<dd><p>A Table is a collection of samples.
+It is specifically designed to be queried from within a database.
+It is a subclass of torch.utils.data.Dataset, so it can be used as a dataset.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="torchql.Table.batch">
+<span class="sig-name descname"><span class="pre">batch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shuffle</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">disable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#torchql.Table" title="torchql.table.Table"><span class="pre">Table</span></a></span></span><a class="headerlink" href="#torchql.Table.batch" title="Permalink to this definition">#</a></dt>
+<dd><p>Batch this table.</p>
+<dl>
+<dt>Args:</dt><dd><p>size (int): The size of the batches.</p>
+<p>random (bool): Whether to shuffle the records before batching.</p>
+</dd>
+<dt>Returns:</dt><dd><p>A new table with the batches.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="torchql.Table.filter">
+<span class="sig-name descname"><span class="pre">filter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cond</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">disable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#torchql.Table" title="torchql.table.Table"><span class="pre">Table</span></a></span></span><a class="headerlink" href="#torchql.Table.filter" title="Permalink to this definition">#</a></dt>
+<dd><p>Filter this table by a condition.</p>
+<dl>
+<dt>Args:</dt><dd><p>cond (Callable): The condition to filter by.</p>
+<dl class="simple">
+<dt>batch_size (int): The batch size to enable batch-processing of the query. Note that a batch size &gt;= 1 assumes</dt><dd><p>your supplied functions run on batches of records as opposed to a single record.</p>
+</dd>
+</dl>
+<p>disable (boolean): A flag that disables progress bars if set to True.</p>
+</dd>
+<dt>Returns:</dt><dd><p>A new table with the filtered records.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="torchql.Table.flatten">
+<span class="sig-name descname"><span class="pre">flatten</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">batch_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">disable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#torchql.Table" title="torchql.table.Table"><span class="pre">Table</span></a></span></span><a class="headerlink" href="#torchql.Table.flatten" title="Permalink to this definition">#</a></dt>
+<dd><p>Flatten this table. If the records of this table are lists, the records of the new table will be the elements of the
+lists.</p>
+<dl>
+<dt>Args:</dt><dd><dl class="simple">
+<dt>batch_size (int): The batch size to enable batch-processing of the query. Note that a batch size &gt;= 1 assumes</dt><dd><p>your supplied functions run on batches of records as opposed to a single record.</p>
+</dd>
+</dl>
+<p>disable (boolean): A flag that disables progress bars if set to True.</p>
+</dd>
+<dt>Returns:</dt><dd><p>A new table with flattened records</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="torchql.Table.group_by">
+<span class="sig-name descname"><span class="pre">group_by</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">disable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#torchql.Table" title="torchql.table.Table"><span class="pre">Table</span></a></span></span><a class="headerlink" href="#torchql.Table.group_by" title="Permalink to this definition">#</a></dt>
+<dd><p>Group this table by a key.
+Records are grouped by the key function. The key function should return a hashable value. The records of the new table
+will be tuples of the key and a list of the records that have that key.</p>
+<dl>
+<dt>Args:</dt><dd><dl class="simple">
+<dt>key (Callable): The key to group by.</dt><dd><p>Must return a hashable value.</p>
+</dd>
+<dt>batch_size (int): The batch size to enable batch-processing of the query. Note that a batch size &gt;= 1 assumes</dt><dd><p>your supplied functions run on batches of records as opposed to a single record.</p>
+</dd>
+</dl>
+<p>disable (boolean): A flag that disables progress bars if set to True.</p>
+</dd>
+<dt>Returns:</dt><dd><p>A new table with the grouped records.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="torchql.Table.group_by_with_index">
+<span class="sig-name descname"><span class="pre">group_by_with_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">disable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#torchql.Table" title="torchql.table.Table"><span class="pre">Table</span></a></span></span><a class="headerlink" href="#torchql.Table.group_by_with_index" title="Permalink to this definition">#</a></dt>
+<dd><p>Group this table by a key.
+Records are grouped by the key function. The key function should return a hashable value. The records of the new table
+will be tuples of the key and a list of the records that have that key.</p>
+<dl>
+<dt>Args:</dt><dd><dl class="simple">
+<dt>key (Callable): The key to group by.</dt><dd><p>Must return a hashable value.</p>
+</dd>
+<dt>batch_size (int): The batch size to enable batch-processing of the query. Note that a batch size &gt;= 1 assumes</dt><dd><p>your supplied functions run on batches of records as opposed to a single record.</p>
+</dd>
+</dl>
+<p>disable (boolean): A flag that disables progress bars if set to True.</p>
+</dd>
+<dt>Returns:</dt><dd><p>A new table with the grouped records.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="torchql.Table.group_reduce">
+<span class="sig-name descname"><span class="pre">group_reduce</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reduction</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">disable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#torchql.Table" title="torchql.table.Table"><span class="pre">Table</span></a></span></span><a class="headerlink" href="#torchql.Table.group_reduce" title="Permalink to this definition">#</a></dt>
+<dd><p>Group this table by a key and reduce the records of each group using a reduction function.</p>
+<dl>
+<dt>Args:</dt><dd><dl class="simple">
+<dt>key (Callable): The key to group by.</dt><dd><p>Must return a hashable value.</p>
+</dd>
+</dl>
+<p>reduction (Callable): The reduction function that takes in the records of each group.</p>
+</dd>
+<dt>Returns:   </dt><dd><p>A new table with the grouped and reduced records.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="torchql.Table.head">
+<span class="sig-name descname"><span class="pre">head</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">print_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchql.Table.head" title="Permalink to this definition">#</a></dt>
+<dd><p>Get the first n records of this table.</p>
+<dl>
+<dt>Args:</dt><dd><p>n (int, optional): The number of records to get. Defaults to 10.</p>
+<p>print_id (bool, optional): Whether to print the id of each row. Defaults to False.</p>
+</dd>
+<dt>Returns:</dt><dd><p>A table with the first n records of this table.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="torchql.Table.intersect">
+<span class="sig-name descname"><span class="pre">intersect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dataset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">disable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#torchql.Table" title="torchql.table.Table"><span class="pre">Table</span></a></span></span><a class="headerlink" href="#torchql.Table.intersect" title="Permalink to this definition">#</a></dt>
+<dd><p>Intersect this table with another table.
+Common records between this and other table will be used to create a new table.
+Common records are identified by the id of the row.
+The columns of the other table will be used in the new table.</p>
+<dl>
+<dt>Args:</dt><dd><p>table (Dataset): The table to intersect with.</p>
+<dl class="simple">
+<dt>batch_size (int): The batch size to enable batch-processing of the query. Note that a batch size &gt;= 1 assumes</dt><dd><p>your supplied functions run on batches of records as opposed to a single record.</p>
+</dd>
+</dl>
+<p>disable (boolean): A flag that disables progress bars if set to True.</p>
+</dd>
+<dt>Returns:</dt><dd><p>A new table with the common records.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="torchql.Table.join">
+<span class="sig-name descname"><span class="pre">join</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dataset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fkey</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">disable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#torchql.Table" title="torchql.table.Table"><span class="pre">Table</span></a></span></span><a class="headerlink" href="#torchql.Table.join" title="Permalink to this definition">#</a></dt>
+<dd><p>Join this table with another table.
+Records are joined if the key function returns the same value for both tables.
+If no key function is provided, the index is used.</p>
+<dl>
+<dt>Args:</dt><dd><p>table (Dataset): The table to join with.</p>
+<dl class="simple">
+<dt>key (Callable, optional): The key function to use for this table. Defaults to None.</dt><dd><p>Must take a set of columns from a row as input and return a hashable value that serves as a key.</p>
+</dd>
+<dt>fkey (Callable, optional): The foreign key function to use for the other table. Defaults to None.</dt><dd><p>Must take a set of columns from a row as input and return a hashable value that serves as a key.</p>
+</dd>
+<dt>batch_size (int): The batch size to enable batch-processing of the query. Note that a batch size &gt;= 1 assumes</dt><dd><p>your supplied functions run on batches of records as opposed to a single record.</p>
+</dd>
+</dl>
+<p>disable (boolean): A flag that disables progress bars if set to True.</p>
+</dd>
+<dt>Returns:</dt><dd><p>A new table with the joined records.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="torchql.Table.order_by">
+<span class="sig-name descname"><span class="pre">order_by</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reverse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">disable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#torchql.Table" title="torchql.table.Table"><span class="pre">Table</span></a></span></span><a class="headerlink" href="#torchql.Table.order_by" title="Permalink to this definition">#</a></dt>
+<dd><p>Order this table by a key.</p>
+<dl>
+<dt>Args:</dt><dd><p>key (Callable): The key to order by.</p>
+<p>reverse (bool, optional): Whether to reverse the order. Defaults to False.</p>
+<dl class="simple">
+<dt>batch_size (int): The batch size to enable batch-processing of the query. Note that a batch size &gt;= 1 assumes</dt><dd><p>your supplied functions run on batches of records as opposed to a single record.</p>
+</dd>
+</dl>
+<p>disable (boolean): A flag that disables progress bars if set to True.</p>
+</dd>
+<dt>Returns:</dt><dd><p>A new table with the ordered records.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="torchql.Table.project">
+<span class="sig-name descname"><span class="pre">project</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cols</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">disable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#torchql.Table" title="torchql.table.Table"><span class="pre">Table</span></a></span></span><a class="headerlink" href="#torchql.Table.project" title="Permalink to this definition">#</a></dt>
+<dd><p>Select or perform an operation on the columns of this table.</p>
+<dl>
+<dt>Args:</dt><dd><p>cols (Callable): A function that takes the columns of this table as arguments and returns a list of the
+projected columns.</p>
+<dl class="simple">
+<dt>batch_size (int): The batch size to enable batch-processing of the query. Note that a batch size &gt;= 1 assumes</dt><dd><p>your supplied functions run on batches of records as opposed to a single record.</p>
+</dd>
+</dl>
+<p>disable (boolean): A flag that disables progress bars if set to True.</p>
+</dd>
+<dt>Returns:</dt><dd><p>A new table with the projected columns.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="torchql.Table.reduce">
+<span class="sig-name descname"><span class="pre">reduce</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">reduction</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">disable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#torchql.Table" title="torchql.table.Table"><span class="pre">Table</span></a></span></span><a class="headerlink" href="#torchql.Table.reduce" title="Permalink to this definition">#</a></dt>
+<dd><p>Reduce the records of this table using a reduction function. This function operates over all the records of the table
+as opposed to each row individually.</p>
+<dl>
+<dt>Args:</dt><dd><p>reduction (Callable): The reduction function that takes in the records of the table.</p>
+<dl class="simple">
+<dt>batch_size (int): The batch size to enable batch-processing of the query. Note that a batch size &gt;= 1 assumes</dt><dd><p>your supplied functions run on batches of records as opposed to a single record.</p>
+</dd>
+</dl>
+<p>disable (boolean): A flag that disables progress bars if set to True.</p>
+</dd>
+<dt>Returns:</dt><dd><p>A new table with the reduced records.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="torchql.Table.sample">
+<span class="sig-name descname"><span class="pre">sample</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">print_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchql.Table.sample" title="Permalink to this definition">#</a></dt>
+<dd><p>Get a random row of this table.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>print_id (bool, optional): Whether to print the id of the row. Defaults to False.</p>
+</dd>
+<dt>Returns:</dt><dd><p>A random row of this table.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="torchql.Table.sample_many">
+<span class="sig-name descname"><span class="pre">sample_many</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">print_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchql.Table.sample_many" title="Permalink to this definition">#</a></dt>
+<dd><p>Get n random records of this table.</p>
+<dl>
+<dt>Args:</dt><dd><p>n (int, optional): The number of records to get. Defaults to 10.</p>
+<p>print_id (bool, optional): Whether to print the id of each row. Defaults to False.</p>
+</dd>
+<dt>Returns:</dt><dd><p>A list of n random records of this table.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="torchql.Table.transform">
+<span class="sig-name descname"><span class="pre">transform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">transform</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#torchql.Table" title="torchql.table.Table"><span class="pre">Table</span></a></span></span><a class="headerlink" href="#torchql.Table.transform" title="Permalink to this definition">#</a></dt>
+<dd><p>Register a PyTorch Transform to apply to this table.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>transform (Callable): The PyTorch transform to apply to the records of this table.</p>
+</dd>
+<dt>Returns:</dt><dd><p>A new table with the transformed records.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="torchql.Table.union">
+<span class="sig-name descname"><span class="pre">union</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dataset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">disable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#torchql.Table" title="torchql.table.Table"><span class="pre">Table</span></a></span></span><a class="headerlink" href="#torchql.Table.union" title="Permalink to this definition">#</a></dt>
+<dd><p>Union this table with another table.
+Records of the other table will be added to the bottom of the table.</p>
+<dl>
+<dt>Args:</dt><dd><p>table (Dataset): The table to union with.</p>
+<dl class="simple">
+<dt>batch_size (int): The batch size to enable batch-processing of the query. Note that a batch size &gt;= 1 assumes</dt><dd><p>your supplied functions run on batches of records as opposed to a single record.</p>
+</dd>
+</dl>
+<p>disable (boolean): A flag that disables progress bars if set to True.</p>
+</dd>
+<dt>Returns:</dt><dd><p>A new table with the combined records.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="torchql.Table.unique">
+<span class="sig-name descname"><span class="pre">unique</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">batch_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">disable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#torchql.Table" title="torchql.table.Table"><span class="pre">Table</span></a></span></span><a class="headerlink" href="#torchql.Table.unique" title="Permalink to this definition">#</a></dt>
+<dd><p>Select the unique records of this table.</p>
+<dl>
+<dt>Args:</dt><dd><dl class="simple">
+<dt>batch_size (int): The batch size to enable batch-processing of the query. Note that a batch size &gt;= 1 assumes</dt><dd><p>your supplied functions run on batches of records as opposed to a single record.</p>
+</dd>
+</dl>
+<p>disable (boolean): A flag that disables progress bars if set to True.</p>
+</dd>
+<dt>Returns:</dt><dd><p>A new table with the unique records.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="query.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">TorchQL’s Query</p>
+      </div>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#torchql.Table"><code class="docutils literal notranslate"><span class="pre">Table</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#torchql.Table.batch"><code class="docutils literal notranslate"><span class="pre">Table.batch()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#torchql.Table.filter"><code class="docutils literal notranslate"><span class="pre">Table.filter()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#torchql.Table.flatten"><code class="docutils literal notranslate"><span class="pre">Table.flatten()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#torchql.Table.group_by"><code class="docutils literal notranslate"><span class="pre">Table.group_by()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#torchql.Table.group_by_with_index"><code class="docutils literal notranslate"><span class="pre">Table.group_by_with_index()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#torchql.Table.group_reduce"><code class="docutils literal notranslate"><span class="pre">Table.group_reduce()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#torchql.Table.head"><code class="docutils literal notranslate"><span class="pre">Table.head()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#torchql.Table.intersect"><code class="docutils literal notranslate"><span class="pre">Table.intersect()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#torchql.Table.join"><code class="docutils literal notranslate"><span class="pre">Table.join()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#torchql.Table.order_by"><code class="docutils literal notranslate"><span class="pre">Table.order_by()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#torchql.Table.project"><code class="docutils literal notranslate"><span class="pre">Table.project()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#torchql.Table.reduce"><code class="docutils literal notranslate"><span class="pre">Table.reduce()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#torchql.Table.sample"><code class="docutils literal notranslate"><span class="pre">Table.sample()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#torchql.Table.sample_many"><code class="docutils literal notranslate"><span class="pre">Table.sample_many()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#torchql.Table.transform"><code class="docutils literal notranslate"><span class="pre">Table.transform()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#torchql.Table.union"><code class="docutils literal notranslate"><span class="pre">Table.union()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#torchql.Table.unique"><code class="docutils literal notranslate"><span class="pre">Table.unique()</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By TorchQL
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023, TorchQL.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

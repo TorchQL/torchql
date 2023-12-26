@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["torchql"]
+
+[project]
+name = "torchql"
+version = "0.0.6"
+description = "A package for programming integrity constraints for machine learning applications."
+dependencies = [
+    "torch", "torchvision", "torchaudio", "deprecation", "tqdm"
+]
+requires-python = ">=3.8"
+
+[project.urls]
+Homepage = "https://github.com/TorchQL/torchql"
+Issues = "https://github.com/TorchQL/torchql/issues"
