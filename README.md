@@ -8,7 +8,7 @@ These integrity constraints can then be directly evaluated over models and datas
 
 ## Demo
 
-You can explore TorchQL without needing to install it using our demo in this [colab notebook](https://colab.research.google.com/drive/1dXsyx20GK6OXuRsQzwANlZzu_0mFqtrZ#scrollTo=ekf17BGSbT0O).
+You can explore TorchQL without needing to install it using our demo in this [colab notebook](https://colab.research.google.com/drive/1dXsyx20GK6OXuRsQzwANlZzu_0mFqtrZ).
 
 
 ## Installation
