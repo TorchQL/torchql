@@ -15,7 +15,15 @@ You can explore TorchQL without needing to install it using our demo in this [co
 
 To install TorchQL, run
 ```bash
-pip install -e .
+pip install torchql
+```
+
+Alternatively, install TorchQL from source to contribute and keep up with the latest updates,
+```bash
+git clone https://github.com/TorchQL/torchql.git
+cd torchql
+
+pip install . # add the -e option to install an editable version of the package
 ```
 
 ## Writing your first query
