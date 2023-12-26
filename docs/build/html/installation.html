@@ -262,7 +262,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -278,6 +280,15 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#from-pip">From PIP</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#from-the-source">From the source</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -289,12 +300,25 @@ document.write(`
                   
   <section id="installation-instructions">
 <h1>Installation Instructions<a class="headerlink" href="#installation-instructions" title="Permalink to this heading">#</a></h1>
-<p>To install TorchQL locally, first clone the git repository, and then install using pip:</p>
+<p>There are two ways of installing TorchQL.</p>
+<section id="from-pip">
+<h2>From PIP<a class="headerlink" href="#from-pip" title="Permalink to this heading">#</a></h2>
+<p>Install TorchQL by running:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>torchql
+</pre></div>
+</div>
+</section>
+<section id="from-the-source">
+<h2>From the source<a class="headerlink" href="#from-the-source" title="Permalink to this heading">#</a></h2>
+<p>You can also install TorchQL from the git repo to keep up with latest developments and contribute to TorchQL.
+First clone the git repository, and then install using pip:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/TorchQL/torchql.git
 <span class="nb">cd</span><span class="w"> </span>torchql
+
 pip<span class="w"> </span>install<span class="w"> </span>.<span class="w"> </span><span class="c1"># add the -e option to install an editable version of the package</span>
 </pre></div>
 </div>
+</section>
 </section>
 
 
@@ -336,6 +360,21 @@ pip<span class="w"> </span>install<span class="w"> </span>.<span class="w"> </sp
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#from-pip">From PIP</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#from-the-source">From the source</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

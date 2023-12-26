@@ -239,6 +239,18 @@ class Query(Module):
         return q
     
     def unique(self, batch_size=0, disable=False) -> Query:
+        """
+        Return the set of unique records of the table.
+
+        Args:
+            batch_size (int): The batch size to enable batch-processing of the query. Note that a batch size >= 1 assumes
+                your supplied functions run on batches of records as opposed to a single record.
+
+            disable (boolean): A flag that disables progress bars if set to True.
+
+        Returns:
+            A new query object with the unique operation registered.
+        """
         q = copy.deepcopy(self)
         q.cached = False
         q.pipeline.append(Operation("unique", None, {'batch_size': batch_size, 'disable': disable}))

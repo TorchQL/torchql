@@ -303,6 +303,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#torchql.Query.rename"><code class="docutils literal notranslate"><span class="pre">Query.rename()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#torchql.Query.run"><code class="docutils literal notranslate"><span class="pre">Query.run()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#torchql.Query.union"><code class="docutils literal notranslate"><span class="pre">Query.union()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#torchql.Query.unique"><code class="docutils literal notranslate"><span class="pre">Query.unique()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -621,6 +622,22 @@ Records of the other table will be added to the bottom of the table.</p>
 </dl>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="torchql.Query.unique">
+<span class="sig-name descname"><span class="pre">unique</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">batch_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">disable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#torchql.Query" title="torchql.query.Query"><span class="pre">Query</span></a></span></span><a class="headerlink" href="#torchql.Query.unique" title="Permalink to this definition">#</a></dt>
+<dd><p>Return the set of unique records of the table.</p>
+<dl>
+<dt>Args:</dt><dd><dl class="simple">
+<dt>batch_size (int): The batch size to enable batch-processing of the query. Note that a batch size &gt;= 1 assumes</dt><dd><p>your supplied functions run on batches of records as opposed to a single record.</p>
+</dd>
+</dl>
+<p>disable (boolean): A flag that disables progress bars if set to True.</p>
+</dd>
+<dt>Returns:</dt><dd><p>A new query object with the unique operation registered.</p>
+</dd>
+</dl>
+</dd></dl>
+
 </dd></dl>
 
 </section>
@@ -691,6 +708,7 @@ Records of the other table will be added to the bottom of the table.</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#torchql.Query.rename"><code class="docutils literal notranslate"><span class="pre">Query.rename()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#torchql.Query.run"><code class="docutils literal notranslate"><span class="pre">Query.run()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#torchql.Query.union"><code class="docutils literal notranslate"><span class="pre">Query.union()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#torchql.Query.unique"><code class="docutils literal notranslate"><span class="pre">Query.unique()</span></code></a></li>
 </ul>
 </li>
 </ul>
