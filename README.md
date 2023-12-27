@@ -1,24 +1,20 @@
 # TorchQL
 
 TorchQL is a query language for Python-based machine learning models and datasets.
-TorchQL comes with PyTorch support to allow for easier integration of TorchQL queries into the machine learning pipeline.
-Users can write queries that specify integrity constraints through a combination of query operations and arbitrary
-user-defined functions.
-These integrity constraints can then be directly evaluated over models and datasets.
 
 ## Demo
 
-You can explore TorchQL without needing to install it using our demo in this [colab notebook](https://colab.research.google.com/drive/1dXsyx20GK6OXuRsQzwANlZzu_0mFqtrZ).
+Try TorchQL using our demo in this [colab notebook](https://colab.research.google.com/drive/1dXsyx20GK6OXuRsQzwANlZzu_0mFqtrZ).
 
 
 ## Installation
 
-To install TorchQL, run
+The easiest way to install TorchQL is as a Python package:
 ```bash
 pip install torchql
 ```
 
-Alternatively, install TorchQL from source to contribute and keep up with the latest updates,
+Alternatively, install TorchQL from source to contribute and keep up with the latest updates:
 ```bash
 git clone https://github.com/TorchQL/torchql.git
 cd torchql
@@ -28,10 +24,10 @@ pip install . # add the -e option to install an editable version of the package
 
 ## Writing your first query
 
-Here is a simple example of queries that can be written in TorchQL to load the MNIST training data and only extract
+Here is a simple example of a query that can be written in TorchQL.  It loads the MNIST training dataset and extracts
 samples with the label equal to 7.
 
-First, we set up the TorchQL database:
+First, we set up a TorchQL database:
 
 ```python
 from torchvision import datasets
@@ -51,15 +47,15 @@ db.register_dataset(train_data, "train")
 ```
 
 Observe that we can directly instantiate a TorchQL table from the PyTorch MNIST train dataset.
-Now we write the query and run it on this dataset:
+Next, we write the query and execute it on this dataset:
 
 ```python
 q = Query('seven', base='train').filter(lambda img, label : label == 7)
 q(db).sample()
 ```
 
-The TorchQL `Query` object is instantiated with a name (here `seven`), and a base table over which operations can be
-specified (here `train`).
+The TorchQL `Query` object is instantiated with a name (here `seven`), and a base table over which operations
+can be specified (here `train`).
 We then specify a `filter` operation to only keep the records that have the label as 7.
 Each record contains an image and its label.
 
@@ -76,7 +72,7 @@ Please refer to the documentation and the demo for in-depth description of each 
 
 ## Documentation
 
-You can find more documentation for TorchQL [here](https://torchql.github.io/torchql/).
+You can find more documentation on TorchQL [here](https://torchql.github.io/torchql/).
 
 ## Papers
 
