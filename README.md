@@ -51,7 +51,7 @@ Next, we write the query and execute it on this dataset:
 
 ```python
 q = Query('seven', base='train').filter(lambda img, label : label == 7)
-q(db).sample()
+print(q(db).sample())
 ```
 
 The TorchQL `Query` object is instantiated with a name (here `seven`), and a base table over which operations
