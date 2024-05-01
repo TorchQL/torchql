@@ -30,7 +30,7 @@ To get started with TorchQL locally, check out the :doc:`quickstart` guide.
 
    installation.md
    quickstart
-   GitHub <https://github.com/DebugML/model-debugging/tree/main>
+   GitHub <https://github.com/TorchQL/torchql>
 
 .. toctree::
    :hidden:
