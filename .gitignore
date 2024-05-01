@@ -1,21 +1,17 @@
-*.egg-info/
-__pycache__/
-vision/
-PennFudan*
-surgery*
-mdb_user_study
-mdb_user_study_supplemental
-cityscapes*
-databases/
-.DS_Store
+# jupyter Notebook
 .ipynb_checkpoints
-*.tar.gz
-*.whl
-exercise
-wilds_data
-*.pkl
-*.lprof
-pipy_token
-experiments/
-publish_new_docs.sh
-data/
+
+# macOS dir files
+.DS_Store
+
+# python
+__pycache__
+*.egg-info/
+dist/
+
+# sphinx documentation
+docs/_build/
+
+# zip archives
+*.zip
+
